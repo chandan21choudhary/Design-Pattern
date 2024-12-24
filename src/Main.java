@@ -1,3 +1,6 @@
+import AbstractFactoryDesignPattern.Employee;
+import AbstractFactoryDesignPattern.EmployeeFactory;
+import AbstractFactoryDesignPattern.WebDevFactory;
 import FactoryDesignPattern.Shape;
 import FactoryDesignPattern.ShapeDrawn;
 import ObserverDesignPattern.Observer;
@@ -14,12 +17,19 @@ import java.io.InputStreamReader;
 public class Main {
     public static void main(String[] args) {
 
-       // observerDesignPattern();
-        //factoryDesignPattern();
+        observerDesignPattern();
+        factoryDesignPattern();
         abstractFactoryDesignPattern();
     }
 
     private static void abstractFactoryDesignPattern() {
+        //Abstract factory design pattern is a creational design pattern
+        //It is one level higher then factory design pattern by adding one more abstraction layer
+        // to return factory of families or dependent objects but without specefying thier concnreate
+        //subclasses
+        //
+       Employee e= EmployeeFactory.getEmployee(new WebDevFactory());
+        System.out.println(e.name()+" "+"my salary is:"+e.salary());
     }
 
     private static void factoryDesignPattern() {

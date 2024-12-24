@@ -1,6 +1,6 @@
 package ObserverDesignPattern;
 
-import java.sql.SQLOutput;
+
 
 public class ObserverImpl implements Observer{
     private String name;
