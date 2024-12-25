@@ -21,10 +21,20 @@ public class Main {
         observerDesignPattern();
         factoryDesignPattern();
         abstractFactoryDesignPattern();
+        builderDesignPattern();
 
-       User user= new User.UserBuilder().setUserId("01").setUserName("Chandan").build();
+    }
+
+    private static void builderDesignPattern() {
+        //its a creational Design pattern, suppose if a class has more number of attributes
+        //So creating constructor and setting all those optional parameters is pain.
+        //if some one needs an object with specefic fields then we cant create object, either we have have to create mulitiple constructors with
+        // all permutation and combination of paramerters, which is not possible that will increase the code length
+        // to resolve this issue Builder design pattern came in picture, here we can create one builder class that will contain all the parameters that
+        //actual class has and also it set the parameter step by step to return builder object. Also this builder class contain one build method
+        // that return the object for actual class.
+        User user= new User.UserBuilder().setUserId("01").setUserName("Chandan").build();
         System.out.println(user);
-
     }
 
     private static void abstractFactoryDesignPattern() {
