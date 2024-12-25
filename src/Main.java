@@ -1,6 +1,7 @@
 import AbstractFactoryDesignPattern.Employee;
 import AbstractFactoryDesignPattern.EmployeeFactory;
 import AbstractFactoryDesignPattern.WebDevFactory;
+import BuilderDesignPattern.User;
 import FactoryDesignPattern.Shape;
 import FactoryDesignPattern.ShapeDrawn;
 import ObserverDesignPattern.Observer;
@@ -20,6 +21,10 @@ public class Main {
         observerDesignPattern();
         factoryDesignPattern();
         abstractFactoryDesignPattern();
+
+       User user= new User.UserBuilder().setUserId("01").setUserName("Chandan").build();
+        System.out.println(user);
+
     }
 
     private static void abstractFactoryDesignPattern() {
